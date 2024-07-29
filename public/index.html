@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact Form</title>
+</head>
+<body>
+    <div class="background">
+        <div class="container">
+            <div class="screen">
+                <div class="screen-header">
+                    <div class="screen-header-left">
+                        <div class="screen-header-button close"></div>
+                        <div class="screen-header-button maximize"></div>
+                        <div class="screen-header-button minimize"></div>
+                    </div>
+                    <div class="screen-header-right">
+                        <div class="screen-header-ellipsis"></div>
+                        <div class="screen-header-ellipsis"></div>
+                        <div class="screen-header-ellipsis"></div>
+                    </div>
+                </div>
+                <div class="screen-body">
+                    <div class="screen-body-item left">
+                        <div class="app-title">
+                            <span>CONTACT</span>
+                            <span>US</span>
+                        </div>
+                        <div class="app-contact">CONTACT INFO : +62 81 314 928 595</div>
+                    </div>
+                    <div class="screen-body-item">
+                        <div class="app-form">
+                            <form id="contactForm" action="/send-email" method="POST">
+                                <div class="app-form-group">
+                                    <input class="app-form-control" type="text" name="name" placeholder="NAME" required>
+                                </div>
+                                <div class="app-form-group">
+                                    <input class="app-form-control" type="tel" name="contact" placeholder="CONTACT NO" required>
+                                </div>
+                                <div class="app-form-group">
+                                    <input class="app-form-control" type="email" name="email" placeholder="EMAIL" >
+                                </div>
+                                <div class="app-form-group">
+                                    <input class="app-form-control" type="text" name="gst" placeholder="GST NUMBER">
+                                </div>
+                                <div class="app-form-group">
+                                    <select class="app-form-control" name="type" required>
+                                        <option value="" disabled selected>TYPE</option>
+                                        <option value="SURFACE TYPE">SURFACE TYPE</option>
+                                        <option value="PIT TYPE">PIT TYPE</option>
+                                        <option value="RCC">RCC</option>
+                                        <option value="MOBILE">MOBILE</option>
+                                    </select>
+                                </div>
+                                <div class="app-form-group">
+                                    <select class="app-form-control" name="size" required>
+                                        <option value="" disabled selected>SIZE</option>
+                                        <option value="9 metre">9 metre</option>
+                                        <option value="10 metre">10 metre</option>
+                                        <option value="14 metre">14 metre</option>
+                                        <option value="16 metre">16 metre</option>
+                                        <option value="18 metre">18 metre</option>
+                                    </select>
+                                </div>
+                                <div class="app-form-group buttons">
+                                    <button class="app-form-button" type="reset">CANCEL</button>
+                                    <button class="app-form-button" type="submit">SEND</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
