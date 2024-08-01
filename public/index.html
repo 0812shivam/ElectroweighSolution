@@ -1,13 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electroweigh Solution</title>
+    <link rel="icon" href="elec/logo.png">
     <link rel="stylesheet" href="style.css">
-    <title>Contact Form</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 </head>
+
 <body>
-    <div class="background">
+    <header class="header">
+        <a href="#" class='logo'>
+            <img class="logoimg" src="elec/logo.png" alt="logo">
+            <div class="compname"><b>ELECTROWEIGH SOLUTION</b></div>
+        </a>
+        <nav class="navbar">
+            <a href="#home" style="--i:1" class="active">Home</a>
+            <a href="#about" style="--i:2">About Us</a>
+            <a href="#products" style="--i:3">Products</a>
+            <!-- <a href="#projects" style="--i:4">Clients</a> -->
+            <a href="#contact" style="--i:5">Contact Us</a>
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="home-text">
+            <div class="homecontent">
+                <h1>IF IT'S ABOUT WEIGHING,<br>IT'S ABOUT US.</h1>
+                <h4>We are leading manufacturers<br>and exporters</h4>
+            </div>
+            <div class="pptbottom">
+                <img class="pimg" src="https://www.peoplestore.ca/wp-content/uploads/2018/11/automotive.svg"
+                    style="--i:1">
+                <img class="pimg" src="https://www.peoplestore.ca/wp-content/uploads/2018/11/ecommerce.svg"
+                    style="--i:2">
+                <img class="pimg" src="https://www.peoplestore.ca/wp-content/uploads/2018/11/vendor.svg" style="--i:3">
+            </div>
+        </div>
         <div class="container">
             <div class="screen">
                 <div class="screen-header">
@@ -28,19 +62,20 @@
                             <span>CONTACT</span>
                             <span>US</span>
                         </div>
-                        <div class="app-contact">CONTACT INFO : +62 81 314 928 595</div>
+                        <!-- <div class="app-contact">CONTACT INFO : +62 81 314 928 595</div> -->
                     </div>
                     <div class="screen-body-item">
                         <div class="app-form">
                             <form id="contactForm" action="/send-email" method="POST">
                                 <div class="app-form-group">
-                                    <input class="app-form-control" type="text" name="name" placeholder="NAME" required>
+                                    <input class="app-form-control" type="text" name="name" placeholder="NAME *" required>
                                 </div>
                                 <div class="app-form-group">
-                                    <input class="app-form-control" type="tel" name="contact" placeholder="CONTACT NO" required>
+                                    <input class="app-form-control" type="tel" name="contact" placeholder="CONTACT NO "
+                                        required>
                                 </div>
                                 <div class="app-form-group">
-                                    <input class="app-form-control" type="email" name="email" placeholder="EMAIL" >
+                                    <input class="app-form-control" type="email" name="email" placeholder="EMAIL">
                                 </div>
                                 <div class="app-form-group">
                                     <input class="app-form-control" type="text" name="gst" placeholder="GST NUMBER">
@@ -69,12 +104,207 @@
                                     <button class="app-form-button" type="submit">SEND</button>
                                 </div>
                             </form>
+                            <div id="message" style="display:none; color:rgb(16, 50, 105); margin-top:20px;">
+                                Enquiry received. Someone from our team will contact you shortly.
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
+            <!-- </div> -->
+
         </div>
-    </div>
+    </section>
+    <a href="https://wa.me/918384034436">
+        <i class='bx bxl-whatsapp bx-tada'
+            style='color:#14fc14; border-radius:50%; font-size: 80px; background-color:#fff; position:fixed; bottom:7px; right:7px; z-index:3'></i>
+    </a>
+    <!-- <section class="info">
+        <marquee onmouseover="this.stop();" onmouseout="this.start()">25+ Years of Quality and Reliabilty &nbsp; &nbsp;
+            &starf;
+            &nbsp;&nbsp; Make In India &nbsp; &nbsp;
+            &starf;
+            &nbsp;&nbsp; Services in 20+ Cities &nbsp;&nbsp;
+            &starf;
+            &nbsp;&nbsp; 5000+ Satisfied Customers &nbsp;&nbsp;
+        </marquee>
+    </section> -->
+    <section class="about" id="about">
+        <div class="about-text">
+            <h1>About <span>Us</span></h1>
+            <h2>ELESOL</h2>
+            <h3>~ Transfoming The Way You Weigh</h3>
+            <br>
+            <p> ELECTROWEIGH SOLUTION is India’s fastest growing manufacturer of weighbridge and
+                Weighing instruments. <br> Our weighbridges are best suited for all the manufacturing units,
+                Warehouses, construction sites and any unit which requires the demand of weighing.
+                We design and manufacture cost effective weighbridges and weighing instruments according
+                to the requirement of our client and provide weighing solutions worldwide. </p>
+            <br><br>
+            <p>Our range of products include Pit type / Surface mounted / Mobile / RCC type weighbridges,
+                Intelligent terminals, Loadcells, Coil weighing systems, Hooper weighing systems, Platform
+                scales, Table top scales, Counter balance.</p>
+            <br><br>
+            <p>
+                <!-- With a market experience of over 25 years in this industry we have successful installations
+                all around the globe. Apart from manufacturing and exporting highly advanced and efficient
+                weighbridges, the company has also successfully implemented many turnkey projects in
+                various different type of industries.</p> -->
+                <button class="btn-box" id="downloadBtn">
+                    <p class="btn">Know More <i class='bx bx-right-arrow-alt'></i></p>
+                </button>
+        </div>
+        <!-- <div class="img"><img src="elec/image_870x_65ccc64be5473.jpg" width="300px" alt="">
+            <img src="elec/Make_In_India.png" width="300px" style="background-color: white;" alt=""> -->
+        <img src="elec/presence.jpg" width="500px" alt="">
+        </div>
+    </section>
+    <section class="products" id="products">
+        <h1>PRODUCTS</h1>
+    
+        <!-- Weighbridge Section -->
+        <div class="weighbridgebg">
+            <h2 class="titleproducts">Weighbridge</h2>
+            <div class="items">
+                <div>
+                    <div class="card">
+                        <img src="elec/surface type .jpeg" width="300px" height="200px" alt="Surface Type Weighbridge">
+                    </div>
+                    <p class="productname">SURFACE TYPE WEIGHBRIDGE</p>
+                </div>
+                <div>
+                    <div class="card">
+                        <img src="elec/pit type.jpg" width="300px" height="200px" alt="Pit Type Weighbridge">
+                    </div>
+                    <p class="productname">PIT TYPE WEIGHBRIDGE</p>
+                </div>
+                <div>
+                    <div class="card">
+                        <img src="elec/rcc type.jpg" width="300px" height="200px" alt="RCC Type Weighbridge">
+                    </div>
+                    <p class="productname">RCC TYPE WEIGHBRIDGE</p>
+                </div>
+                <div>
+                    <div class="card">
+                        <img src="elec/mobile weighbridge.jpg" width="300px" height="200px" alt="Mobile Weighbridge">
+                    </div>
+                    <p class="productname">MOBILE WEIGHBRIDGE</p>
+                </div>
+            </div>
+        </div>
+    
+        <br><br>
+    
+        <!-- Load Cell Section -->
+        <div class="loadcellbg">
+            <h2 class="titleproducts" >Load Cell</h2>
+            <div class="items">
+                <div>
+                    <div class="card">
+                        <img src="elec/compression load cell.jpeg" width="300px" height="200px" alt="Compression Load Cell">
+                    </div>
+                    <p class="loadcellcontent">Compression Load Cell</p>
+                </div>
+                <div>
+                    <div class="card">
+                        <img src="elec/cup and ball load cell.jpeg" width="300px" height="200px" alt="Cup and Ball Load Cell">
+                    </div>
+                    <p class="loadcellcontent">Cup and Ball Load Cell</p>
+                </div>
+                <div>
+                    <div class="card">
+                        <img src="elec/double ended shear beam load cell.jpeg" style="object-fit: contain;" alt="Double Ended Shear Beam">
+                    </div>
+                    <p class="loadcellcontent">Double Ended Shear Beam</p>
+                </div>
+            </div>
+        </div>
+    
+        <br><br>
+    
+        <!-- Online System Section -->
+        <div class="onlinesystembg">
+            <h2 class="titleproducts">Online System</h2>
+            <div class="items">
+                <div>
+                    <div class="card">
+                        <img src="elec/online system.jpg" width="300px" height="200px" alt="Online System">
+                    </div>
+                    <p class="onlinesystemcontent">Online System</p>
+                </div>
+                <div>
+                    <div class="card">
+                        <img src="elec/online system1.jpg" width="300px" height="200px" alt="Online System">
+                    </div>
+                    <p class="onlinesystemcontent">Online System</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="director">
+        <h1>DIRECTOR'S STATEMENT</h1>
+        <q>Building our bridge towards a better future</q>
+        <p>Our aim is to provide you weighbridges which lasts generations. Electroweigh Solution’s growth has been sure
+            and steady due to its strong focus on quality in manufacturing process and service provided to our customer
+            under any circumstance anywhere in India has led to satisfied and loyal customer base. Because of our
+            quality and highly advanced weighbridges we have reached a pre-eminent position in its market segment with
+            fully operational manufacturing facility in Delhi, India. To provide our customers the fastest possible
+            service in any part of india we have several Engineers distributed strategically all across India so that
+            your weighbridge doesn’t stop even for few hours.
+            <br><br>
+            We at Electroweigh Solution strive to protect your profits by providing the best accuracy and quality
+            product. Together as a family we will counter every challenge that may come our way like we have always
+            faced them successfully with our operational efficiency. Our passion to excel in manufacturing Weighbridge
+            and Weighing instruments has gives us a unique distinction in every aspect of this competitive industry. The
+            testimonials we receive always motivate us to perform better every moment.
+            <br><br>
+            At Electroweigh Solution, we are committed to offer the best possible and pocket friendly solution for the
+            weighing industry because we value your money.
+        </p>
+        <q>
+            Electroweigh Solution is a quality and customer oriented company with global vision and reach. The journey
+            of Electroweigh Solution started 40 years ago with a dream to set up a weighbridge manufacturing company in
+            the capital of India. After working in each and every segment from marketing to production of this industry
+            the foundation Electroweigh Solution was laid with a dream and vision to provide Indian industries with best
+            in class and highly advanced made in India Weighbridges & Weighing Instrument.
+        </q>
+        <p class="name">~Mr. Manoj Gupta</p>
+    </section>
+    <section class="contact" id="contact">
+        <div class="phone">
+            <h1>Contact <span>Us</span></h1> <br>
+            <i class='bx bx-phone' style='color:rgb(16, 50, 105)'></i>&emsp; +91-9773792825 <br><br>
+            <i class='bx bx-phone' style='color:rgb(16, 50, 105)'></i>&emsp; +91-8384034436 <br><br>
+            <a href="mailto:electroweighsolution@gmail.com"><i class='bx bxl-gmail' style='color:rgb(16, 50, 105)'></i> &emsp;
+                electroweighsolution@gmail.com</a><br><br>
+            <img src="elec/Make_In_India.png" width="300px"
+                style="background-color: #ffff; padding: 5px; margin: 5px;">
+        </div>
+        <div class="office">
+            <i class='bx bx-map'></i> 2nd Floor, C-174, Prashant Vihar, Rohini, <br> &emsp; North West Delhi,
+            Delhi-110085 <br>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.128839536363!2d77.13377517448137!3d28.715695380301227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0164d76e038d%3A0x5bb33a82e650c596!2s2nd%20floor%20c%2C%20D-174%2C%20Prashant%20Vihar%2C%20Sector%2014%2C%20Rohini%2C%20Delhi%2C%20110085!5e0!3m2!1sen!2sin!4v1722327704556!5m2!1sen!2sin"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="factory">
+            <i class='bx bx-map'></i> KH No. 76, Ranholla, Near MCD School, <br> &emsp; New Delhi, West Delhi,
+            Delhi-110041
+            <br>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d28006.797710726714!2d77.0283446231856!3d28.66421824785789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1skh%20no%2076%20ranhola%20near%20mcd%20school%20new%20delhi%2C%20west%20delhi%2C%20delhi-110041!5e0!3m2!1sen!2sin!4v1722327738835!5m2!1sen!2sin"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <!-- <footer>
+        <p>Developed by Yakshit Khurana &copy; 2024</p>
+    </footer> -->
+    <script src="script.js"></script>
 </body>
 </html>
