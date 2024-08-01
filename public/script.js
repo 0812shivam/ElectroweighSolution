@@ -51,32 +51,5 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // 
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('contactForm');
-    const messageDiv = document.getElementById('message');
 
-    form.addEventListener('submit', (event) => {
-        event.preventDefault(); // Prevent the default form submission
 
-        const formData = new FormData(form);
-
-        fetch('/send-email', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok.');
-            }
-            return response.text();
-        })
-        .then(data => {
-            messageDiv.style.display = 'block'; // Show the success message
-            form.reset(); // Optionally reset the form
-        })
-        .catch(error => {
-            console.error('There was a problem with the fetch operation:', error);
-            alert('There was a problem with your submission. Please try again.');
-        });
-    });
-});
