@@ -1,6 +1,6 @@
 document.getElementById("downloadBtn").addEventListener("click", function () {
 	// Path to the PDF file
-	const pdfUrl = "ELESOL Company catalogue.pdf";
+	const pdfUrl = "ELESOL2024.pdf";
 	// Create an invisible link element
 	const link = document.createElement("a");
 	link.href = pdfUrl;
