@@ -249,7 +249,7 @@ p.btn:hover {
 .titleproducts{
   padding-top: 20px;
   padding-left: 90px;
-  font-size: 50px;
+  font-size: 30px;
   /* color:rgb(70, 114, 184) */
 
 }
@@ -350,13 +350,13 @@ p.btn:hover {
 .director p {
 	font-size: 18px;
 	padding: 20px;
-	font-style: italic;
+	/* font-style: italic; */
 	font-weight: 400;
 	color: rgb(70, 114, 184);
 	/* backdrop-filter: blur(5px); */
 }
 .director .name {
-	font-weight: 500;
+	font-weight: 800;
 	color: rgb(16, 50, 105);
 	text-align: center;
 }
@@ -397,12 +397,12 @@ p.btn:hover {
 
 footer {
 	width: 100%;
-	background-color: #347e88;
+	background-color: rgb(16, 50, 105);
 }
 footer p {
 	vertical-align: middle;
 	text-align: center;
-	color: #fff;
+	color: rgb(172, 199, 241);
 	padding: 8px;
 	font-size: 15px;
 }
@@ -578,6 +578,123 @@ select.app-form-control {
 	border-bottom: 1px solid rgb(70, 114, 184);
 }
 
+ /* Dropdown container */
+ .dropdown {
+  position: relative;
+  display: inline-block;
+  
+}
+
+/* Dropdown menu (hidden by default) */
+.dropdown-content {
+  
+  font-size: 10px;
+  display: none;
+  position: absolute;
+  background-color: rgba(16, 50, 105,0.3);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  top: 100%; /* Position below the link */
+  left: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /* border: solid  rgb(16, 50, 105); */
+  
+}
+
+/* Style for each dropdown item */
+.dropdown-content li {
+  font-size: 15px;
+  padding: 10px;
+  text-align: left;
+}
+
+/* Style for each dropdown item link */
+.dropdown-content a {
+  font-size: 15px;
+  text-decoration: none;
+  color: white;
+  display: block;
+  text-align: left;
+}
+
+/* Change background on hover */
+.dropdown-content li:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.rotatingtext25{
+	margin-left: 0px;
+	margin-bottom: 40px;
+	margin-top: 30px;
+	font-size: 40px;
+	color: rgb(16, 50, 105);
+	/* color: black; */
+}
+
+/* .rotatingtext{
+	margin-left: 60px;
+	margin-bottom: 0px;
+	margin-top: 40px;
+	font-size: 10px;
+	color: white;
+	background-color: rgb(16, 50, 105) ;
+	border-radius: 100%;
+	
+	
+
+} */
+.circle{
+	position: relative;
+	width: 200px;
+	height: 200px;
+	/* background:red; */
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+
+}
+
+.text{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	animation: anim 10s linear infinite;
+	color: white;
+	font-size:10px;
+	/* background-color: rgb(70, 114, 184);
+	border-radius: 100%; */
+
+}
+
+@keyframes anim{
+	0% {
+		transform: rotate(0deg) ;
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.text span{
+	position: absolute;
+	left: 50%;
+	font-size: 1.2em;
+	transform-origin: 0 100px;
+
+}
+
+
+
+
 /* .credits {
 	display: flex;
 	justify-content: center;
@@ -602,3 +719,52 @@ select.app-form-control {
 	height: 20px;
 	margin: 0 5px;
 } */
+
+.stats-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    flex-wrap: wrap;
+	margin-top: 20px;
+}
+
+.stat-item {
+    text-align: center;
+    margin: 20px;
+    flex: 1;
+    min-width: 180px; /* Adjust as necessary */
+    max-width: 200px;
+}
+
+.stat-item img {
+    width: 200px; /* Adjust size of icons as needed */
+    height: 120px;
+    margin-bottom: 10px;
+	/* border-radius: 60%; */
+}
+
+.stat-item h3 {
+    color: rgb(16, 50, 105);
+    font-size: 24px;
+    margin: 5px 0;
+	transition: color 0.5s ease-in-out;
+}
+
+.stat-item p {
+    color: rgb(70, 114, 184);
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .stats-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .stat-item {
+        margin: 10px 0;
+    }
+}
