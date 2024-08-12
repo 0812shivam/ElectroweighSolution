@@ -408,15 +408,17 @@ footer p {
 }
 /* SHVM FORM */
 .container {
+	
 	flex: 0 1 700px;
 	/* margin: auto; */
-  margin: 5px,5px,5px,5px;
+    margin: 5px,5px,5px,5px;
 	padding: 10px;
 	font-weight: 700;
 	letter-spacing: 1.4px;
 }
 
 .screen {
+	
 	position: relative;
 	background: rgba(70, 114, 184,0.7);
 	border-radius: 15px;
@@ -498,11 +500,12 @@ footer p {
 }
 
 .app-title {
+	
 	display: flex;
 	flex-direction: column;
 	position: relative;
 	/* color: skyblue; */
-  color: rgb(16, 50, 105);
+   color: rgb(16, 50, 105);
 	font-size: 26px;
 }
 
@@ -768,3 +771,213 @@ select.app-form-control {
         margin: 10px 0;
     }
 }
+
+/* career */
+#job-section {
+    background-color: rgba(70, 114, 184,0.5);
+	background-color: white;
+    padding: 20px;
+    max-width: 800px;
+    margin: 50px auto;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.JobsAtElesol {
+	margin-top: 30px;
+    text-align: center;
+    
+	
+}
+
+.main-title {
+    color: rgb(16, 50, 105);
+    font-size: 36px;
+    margin: 0;
+}
+
+#content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.job-details {
+    width: 48%;
+}
+
+.job-description {
+    width: 48%;
+}
+
+.job-title {
+    color: rgb(16, 50, 105);
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.description-title {
+    color: rgb(16, 50, 105);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.job-info {
+    color: rgb(70, 114, 184);
+    line-height: 1.6;
+    margin: 5px 0;
+}
+
+.description-list {
+    padding-left: 20px;
+}
+
+.description-item {
+    color: rgb(70, 114, 184);
+    margin-bottom: 8px;
+}
+
+/* career end */
+#job-section1 {
+    background-color: rgb(70, 114, 184);
+	
+    padding: 20px;
+    max-width: 800px;
+    margin: 50px auto;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+#header1 {
+	
+    text-align: center;
+    margin-bottom: 20px;
+	
+}
+
+.main-title1 {
+    color: white;
+    font-size: 36px;
+    margin: 0;
+}
+
+#content1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.job-details1 {
+    width: 48%;
+}
+
+.job-description1 {
+    width: 48%;
+}
+
+.job-title1 {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.description-title1 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.job-info1 {
+    color: white;
+    line-height: 1.6;
+    margin: 5px 0;
+}
+
+.description-list1 {
+    padding-left: 20px;
+}
+
+.description-item1 {
+    color: white;
+    margin-bottom: 8px;
+}
+.btn-box1 {
+	display: flex;
+	justify-content: center;
+	margin: 30px 0;
+	margin-top: 25px;
+	border-radius: 40px;
+	cursor: pointer;
+}
+.btn-box1 p.btn1 {
+	padding: 12px 30px;
+	/* background: skyblue; */
+  color: rgb(70, 114, 184);
+	border-radius: 40px;
+	/* color: rgb(70, 114, 184); */
+  color:rgb(16, 50, 105);
+	letter-spacing: 1px;
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 20px;
+	cursor: pointer;
+	/* box-shadow: 0 0 20px #0ef; */
+	transition: all 0.3s;
+}
+p.btn1:hover {
+	background: rgb(70, 114, 184);
+	/* color: skyblue; */
+  color: white;
+	border: solid;
+	/* box-shadow: 0 10px 25px white; */
+	border-radius: 40px;
+}
+
+
+/* FAQ */
+.faq {
+    padding: 40px;
+    background-color: #f9f9f9;
+    /* margin-top: 10px; */
+}
+
+.faq h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+	color:rgb(16, 50, 105);
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+	
+}
+
+.faq-item .question {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0;
+    cursor: pointer;
+	color: rgb(70, 114, 184);
+}
+
+.faq-item .answer {
+    display: none;
+    margin-top: 10px;
+    font-size: 1em;
+    color: rgb(118, 159, 224);
+	font-size: 20px;
+}
+
+.faq-item.active .answer {
+    display: block;
+}
+
+
+
+
+/* FAQ END */
