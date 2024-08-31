@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
 </head>
 <body>
-    <!-- Navigation bar (optional, you can copy the existing navbar here) -->
+    <!-- Navigation bar (optional) -->
     <header class="header">
         <a href="#" class='logo'>
             <img class="logoimg" src="elec/logo.png" alt="logo">
@@ -20,18 +21,14 @@
         <nav class="navbar">
             <a href="index.html#home" style="--i:1" class="active">Home</a>
             <a href="index.html#about" style="--i:2">About Us</a>
-            
-            <!-- Dropdown container for Products -->
             <div class="dropdown">
                 <a href="index.html#products" style="--i:3">Products</a>
-                <!-- Dropdown menu -->
                 <ul class="dropdown-content">
                     <li><a href="index.html#weighbridge">Weighbridge</a></li>
                     <li><a href="index.html#loadcell">Load Cell</a></li>
                     <li><a href="index.html#onlinesystem">Online System</a></li>
                 </ul>
             </div>
-        
             <a href="index.html#contact" style="--i:5">Contact Us</a>
             <a href="career.html" style="--i:6">Career</a>
         </nav>
@@ -42,7 +39,6 @@
         <h1 class="main-title">JOBS AT ELESOL</h1>
     </div>
     <div id="job-section">
-        
         <div id="content">
             <div class="job-details">
                 <h2 class="job-title">Senior Sales Manager</h2>
@@ -64,17 +60,14 @@
                     <li class="description-item">Prepare reports by collecting, analyzing, and summarizing information.</li>
                     <li class="description-item">Payment followup</li>
                 </ul>
-                <button class="btn-box1" >
-                    <p class="btn1" id="products1">Apply Now <i class='bx bx-right-arrow-alt'></i></p>
+                <button class="btn-box1">
+                    <p class="btn1">Apply Now <i class='bx bx-right-arrow-alt'></i></p>
                 </button>
-                <!-- Modal Form -->
             </div>
-            
         </div>
-        
     </div>
-    
-    <div id="job-section1"> 
+
+    <div id="job-section1">
         <div id="content1">
             <div class="job-details1">
                 <h2 class="job-title1">Senior Sales Executive</h2>
@@ -96,12 +89,95 @@
                     <li class="description-item1">Prepare reports by collecting, analyzing, and summarizing information.</li>
                     <li class="description-item1">Payment followup</li>
                 </ul>
-                <button class="btn-box1" >
-                    <p class="btn1" id="products1">Apply Now <i class='bx bx-right-arrow-alt'></i></p>
+                <button class="btn-box1">
+                    <p class="btn1">Apply Now <i class='bx bx-right-arrow-alt'></i></p>
                 </button>
             </div>
         </div>
     </div>
+
+    <!-- Modal Form -->
+    <div id="applyModalUnique" class="modalUnique">
+        <div class="modalContentUnique">
+            <span class="closeUnique">&times;</span>
+            <h2 id="positionUnique">Job Application Form</h2>
+            <p>Please Fill Out the Form Below to Submit Your Job Application!</p>
+            <form id="applyNowFormUnique" method="POST" action="/apply-now" enctype="multipart/form-data">
+                <div class="formGroupUnique">
+                    <label for="firstNameUnique">Name</label>
+                    <div class="nameFieldsUnique">
+                        <input type="text" id="firstNameUnique" name="name" placeholder="Full Name" required>
+                    </div>
+                </div>
+                <div class="formGroupUnique">
+                    <label for="emailUnique">E-mail</label>
+                    <input type="email" id="emailUnique" name="email" placeholder="example@example.com" required>
+                </div>
+                <div class="formGroupUnique">
+                    <label for="phoneUnique">Phone Number</label>
+                    <input type="tel" id="phoneUnique" name="phone" placeholder="1234567890" required>
+                </div>
+                <div class="formGroupUnique">
+                    <label for="positionInputUnique">Applied Position</label>
+                    <input type="text" id="positionInputUnique" name="position" readonly>
+                </div>
+                <div class="formGroupUnique">
+                    <label for="whyHireUnique">Why should we hire you?</label>
+                    <textarea id="whyHireUnique" name="whyHire" cols="100" rows="5" maxlength="200" placeholder="Write up to 200 words" required></textarea>
+                </div>
+                <div class="formGroupUnique">
+                    <label for="resumeUnique">Upload Resume</label>
+                    <input type="file" id="resumeUnique" name="resume" required>
+                </div>
+                <button type="submit" class="submitBtnUnique">Submit</button>
+            </form>
+            
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            var modal = document.getElementById("applyModalUnique");
+            var span = document.getElementsByClassName("closeUnique")[0];
+    
+            document.querySelectorAll(".btn-box1").forEach(button => {
+                button.addEventListener('click', function() {
+                    var position = this.closest('.job-description, .job-description1').previousElementSibling.querySelector('.job-title, .job-title1').textContent;
+                    document.getElementById('positionInputUnique').value = position.trim();
+                    modal.style.display = "block";
+                });
+            });
+    
+            span.onclick = function() {
+                modal.style.display = "none";
+            };
+    
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            };
+    
+            document.getElementById("applyNowFormUnique").addEventListener('submit', function(e) {
+                e.preventDefault(); // Prevent the default form submission
+                
+                var formData = new FormData(this);
+    
+                fetch('/apply-now', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.text())
+                .then(data => {
+                    modal.style.display = "none";
+                    alert('Successfully applied for the role! Check out our other open positions.');
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            });
+        });
+    </script>
     
 </body>
 </html>

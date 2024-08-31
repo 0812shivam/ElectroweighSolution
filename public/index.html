@@ -325,58 +325,74 @@
     </section>
     <!-- FAQ -->
     <section class="faq">
-        <h1>Frequently Asked Questions</h1>
+    <h1>Frequently Asked Questions</h1>
+    
+    <div class="faq-item">
+        <h3 class="question">1. What is a weighbridge and how does it work?</h3>
+        <p class="answer">A weighbridge is a large scale used to weigh entire vehicles and their contents. It is typically used for weighing trucks carrying goods. The vehicle is driven onto the weighbridge platform, and the weight is recorded using load cells placed underneath.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3 class="question">2. What types of weighbridges are available at Electroweigh Solution?</h3>
+        <p class="answer">Electroweigh Solution offers various types of weighbridges, including pit-mounted, surface-mounted, portable weighbridges, and axle weighbridges, designed to meet different industrial requirements.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3 class="question">3. How accurate are the weighbridges provided by Electroweigh Solution?</h3>
+        <p class="answer">Our weighbridges are designed to provide the highest accuracy possible, typically within ±0.1% of the total weight, ensuring reliable and precise measurements for your operations.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3 class="question">4. What kind of maintenance is required for a weighbridge?</h3>
+        <p class="answer">Regular maintenance for a weighbridge includes cleaning the platform, checking load cells and connections, calibrating the system, and inspecting the overall structure for any wear and tear. Electroweigh Solution offers maintenance services to ensure your weighbridge remains in top condition.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3 class="question">5. How long does it take to install a weighbridge?</h3>
+        <p class="answer">The installation time for a weighbridge depends on the type and complexity of the installation. Typically, a standard installation can take between 7 to 14 days, including civil works and calibration.</p>
+    </div>
+
+    <div class="faq-item hid">
+        <h3 class="question">6. Can Electroweigh Solution customize a weighbridge to specific needs?</h3>
+        <p class="answer">Yes, we offer customized weighbridge solutions tailored to meet specific industry requirements, including custom sizes, capacities, and additional features like software integration and remote monitoring.</p>
+    </div>
+
+    <div class="faq-item hid">
+        <h3 class="question">7. What is the typical lifespan of a weighbridge?</h3>
+        <p class="answer">A well-maintained weighbridge can last anywhere from 15 to 25 years, depending on usage and environmental conditions. Regular maintenance and servicing are key to ensuring its longevity.</p>
+    </div>
+
+    <div class="faq-item hid">
+        <h3 class="question">8. Does Electroweigh Solution provide weighbridge calibration services?</h3>
+        <p class="answer">Yes, Electroweigh Solution provides comprehensive calibration services to ensure your weighbridge is operating accurately. We recommend regular calibration checks to maintain measurement accuracy.</p>
+    </div>
+
+    <div class="faq-item hid">
+        <h3 class="question">9. What support services does Electroweigh Solution offer after installation?</h3>
+        <p class="answer">We offer a full range of support services including maintenance, repairs, calibration, and customer support to ensure your weighbridge continues to operate efficiently long after installation.</p>
+    </div>
+
+    <div class="faq-item hid">
+        <h3 class="question">10. How can I get a quote for a weighbridge from Electroweigh Solution?</h3>
+        <p class="answer">You can get a quote by contacting us directly through our website, email, or phone. We will assess your specific requirements and provide a detailed quote tailored to your needs.</p>
+    </div>
+    
+    <button id="moreq">More Queries</button>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('moreq').addEventListener('click', function() {
+                console.log('More Queries button clicked');
+                const hiddenItems = document.querySelectorAll('.faq-item.hid');
+                hiddenItems.forEach(function(item) {
+                    item.classList.remove('hid');
+                });
+                this.style.display = 'none';
+            });
+        });
+        </script>
         
-        <div class="faq-item">
-            <h3 class="question">1. What is a weighbridge and how does it work?</h3>
-            <p class="answer">A weighbridge is a large scale used to weigh entire vehicles and their contents. It is typically used for weighing trucks carrying goods. The vehicle is driven onto the weighbridge platform, and the weight is recorded using load cells placed underneath.</p>
-        </div>
-    
-        <div class="faq-item">
-            <h3 class="question">2. What types of weighbridges are available at Electroweigh Solution?</h3>
-            <p class="answer">Electroweigh Solution offers various types of weighbridges, including pit-mounted, surface-mounted, portable weighbridges, and axle weighbridges, designed to meet different industrial requirements.</p>
-        </div>
-    
-        <div class="faq-item">
-            <h3 class="question">3. How accurate are the weighbridges provided by Electroweigh Solution?</h3>
-            <p class="answer">Our weighbridges are designed to provide the highest accuracy possible, typically within ±0.1% of the total weight, ensuring reliable and precise measurements for your operations.</p>
-        </div>
-    
-        <div class="faq-item">
-            <h3 class="question">4. What kind of maintenance is required for a weighbridge?</h3>
-            <p class="answer">Regular maintenance for a weighbridge includes cleaning the platform, checking load cells and connections, calibrating the system, and inspecting the overall structure for any wear and tear. Electroweigh Solution offers maintenance services to ensure your weighbridge remains in top condition.</p>
-        </div>
-    
-        <div class="faq-item">
-            <h3 class="question">5. How long does it take to install a weighbridge?</h3>
-            <p class="answer">The installation time for a weighbridge depends on the type and complexity of the installation. Typically, a standard installation can take between 7 to 14 days, including civil works and calibration.</p>
-        </div>
-    
-        <div class="faq-item">
-            <h3 class="question">6. Can Electroweigh Solution customize a weighbridge to specific needs?</h3>
-            <p class="answer">Yes, we offer customized weighbridge solutions tailored to meet specific industry requirements, including custom sizes, capacities, and additional features like software integration and remote monitoring.</p>
-        </div>
-    
-        <div class="faq-item">
-            <h3 class="question">7. What is the typical lifespan of a weighbridge?</h3>
-            <p class="answer">A well-maintained weighbridge can last anywhere from 15 to 25 years, depending on usage and environmental conditions. Regular maintenance and servicing are key to ensuring its longevity.</p>
-        </div>
-    
-        <div class="faq-item">
-            <h3 class="question">8. Does Electroweigh Solution provide weighbridge calibration services?</h3>
-            <p class="answer">Yes, Electroweigh Solution provides comprehensive calibration services to ensure your weighbridge is operating accurately. We recommend regular calibration checks to maintain measurement accuracy.</p>
-        </div>
-    
-        <div class="faq-item">
-            <h3 class="question">9. What support services does Electroweigh Solution offer after installation?</h3>
-            <p class="answer">We offer a full range of support services including maintenance, repairs, calibration, and customer support to ensure your weighbridge continues to operate efficiently long after installation.</p>
-        </div>
-    
-        <div class="faq-item">
-            <h3 class="question">10. How can I get a quote for a weighbridge from Electroweigh Solution?</h3>
-            <p class="answer">You can get a quote by contacting us directly through our website, email, or phone. We will assess your specific requirements and provide a detailed quote tailored to your needs.</p>
-        </div>
-    </section>
+</section>
+
     
      <!-- FAQ END -->
     <section class="contact" id="contact">

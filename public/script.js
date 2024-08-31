@@ -1,4 +1,6 @@
 document.getElementById("downloadBtn").addEventListener("click", function () {
+
+    console.log('Know More button clicked');
 	// Path to the PDF file
 	const pdfUrl = "ELESOL2024.pdf";
 	// Create an invisible link element
@@ -157,3 +159,47 @@ document.querySelectorAll('.faq-item .question').forEach(item => {
     });
 });
 
+// apply now form
+
+document.getElementById('applyNowFormUnique').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Gather form data
+    const formData = new FormData(this);
+    const formMessage = document.getElementById('form-message-unique'); // Element to show the message
+
+    // Make the AJAX request
+    fetch('/apply-now', {
+        method: 'POST',
+        body: formData // FormData object includes file uploads
+    })
+    .then(response => {
+        if (response.ok) {
+            // Display custom success message
+            formMessage.innerHTML = `<p style="color: rgb(16, 50, 105);">Successfully applied for the role! Check out our other open positions.</p>`;
+            this.reset(); // Reset the form fields
+        } else {
+            throw new Error('Error in submitting application');
+        }
+    })
+    .catch(error => {
+        // Display error message
+        formMessage.innerHTML = `<p style="color: red;">${error.message}</p>`;
+    });
+});
+
+
+// apply now form ends
+
+
+// faq
+// document.getElementById('moreq').addEventListener('click', function() {
+//     console.log('More Queries button clicked');
+//     const hiddenItems = document.querySelectorAll('.faq-item.hid');
+//     hiddenItems.forEach(function(item) {
+//         item.classList.remove('hid');
+//     });
+//     this.style.display = 'none';
+// });
+
+// faq ends 
