@@ -20,24 +20,51 @@
             <img class="logoimg" src="elec/logo.png" alt="logo">
             <div class="compname"><b>ELECTROWEIGH SOLUTION</b></div>
         </a>
+        <div class="menu-icon" onclick="toggleNavbar()">&#9776;</div>
+        <script>
+            function toggleNavbar() {
+              var navbar = document.querySelector('.navbar');
+              navbar.classList.toggle('active');
+            }
+          </script>
+          
         <nav class="navbar">
             <a href="#home" style="--i:1" class="active">Home</a>
             <a href="#about" style="--i:2">About Us</a>
-            
+            <a href="#products" style="--i:3">Products</a>
             <!-- Dropdown container for Products -->
-            <div class="dropdown">
-                <a href="#products" style="--i:3">Products</a>
+            <!-- <div class="dropdown">
+                <a href="#products" style="--i:3">Products</a> -->
                 <!-- Dropdown menu -->
-                <ul class="dropdown-content">
+                <!-- <ul class="dropdown-content">
                     <li><a href="#weighbridge">Weighbridge</a></li>
                     <li><a href="#loadcell">Load Cell</a></li>
                     <li><a href="#onlinesystem">Online System</a></li>
                 </ul>
-            </div>
+            </div> -->
         
             <a href="#contact" style="--i:5">Contact Us</a>
             <a href="career.html" style="--i:6">Career</a>
         </nav>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const menuIcon = document.querySelector('.menu-icon');
+                const navItems = document.querySelector('.nav-items');
+            
+                // Toggle navbar visibility on menu icon click
+                menuIcon.addEventListener('click', function() {
+                    navItems.classList.toggle('open');
+                });
+            
+                // Close navbar when a nav item is clicked
+                navItems.querySelectorAll('a').forEach(function(navLink) {
+                    navLink.addEventListener('click', function() {
+                        navItems.classList.remove('open');
+                    });
+                });
+            });
+            
+        </script>
     </header>
     <section class="home" id="home">
         <div class="home-text">
@@ -293,16 +320,16 @@
         </div>
     </section>
     
-    
-    <section class="director">
+    <section class="director">    
         <h1>DIRECTOR'S STATEMENT</h1>
         <q>Building our bridge towards a better future</q>
-        <p>Our aim is to provide you weighbridges which lasts generations. Electroweigh Solution’s growth has been sure
+        <p id="statement-content">
+            Our aim is to provide you weighbridges which lasts generations. Electroweigh Solution’s growth has been sure
             and steady due to its strong focus on quality in manufacturing process and service provided to our customer
             under any circumstance anywhere in India has led to satisfied and loyal customer base. Because of our
             quality and highly advanced weighbridges we have reached a pre-eminent position in its market segment with
             fully operational manufacturing facility in Delhi, India. To provide our customers the fastest possible
-            service in any part of india we have several Engineers distributed strategically all across India so that
+            service in any part of India we have several Engineers distributed strategically all across India so that
             your weighbridge doesn’t stop even for few hours.
             <br><br>
             We at Electroweigh Solution strive to protect your profits by providing the best accuracy and quality
@@ -322,7 +349,24 @@
             in class and highly advanced made in India Weighbridges & Weighing Instrument.
         </q>
         <p class="name">~Mr. Manoj Gupta</p>
+        <button id="read-more-btn" onclick="toggleReadMore()">Read More</button>
+        <script>
+            function toggleReadMore() {
+                const content = document.getElementById('statement-content');
+                const button = document.getElementById('read-more-btn');
+            
+                if (content.style.maxHeight === '100px') {
+                    content.style.maxHeight = '100%';
+                    button.textContent = 'Read Less';
+                } else {
+                    content.style.maxHeight = '100px';
+                    button.textContent = 'Read More';
+                }
+            }
+            
+        </script>
     </section>
+    
     <!-- FAQ -->
     <section class="faq">
     <h1>Frequently Asked Questions</h1>

@@ -18,6 +18,13 @@
             <img class="logoimg" src="elec/logo.png" alt="logo">
             <div class="compname"><b>ELECTROWEIGH SOLUTION</b></div>
         </a>
+        <div class="menu-icon" onclick="toggleNavbar()">&#9776;</div>
+        <script>
+            function toggleNavbar() {
+              var navbar = document.querySelector('.navbar');
+              navbar.classList.toggle('active');
+            }
+          </script>
         <nav class="navbar">
             <a href="index.html#home" style="--i:1" class="active">Home</a>
             <a href="index.html#about" style="--i:2">About Us</a>
